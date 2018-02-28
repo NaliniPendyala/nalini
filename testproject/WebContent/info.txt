@@ -1,0 +1,199 @@
+Register: Class.forName("Driver name") Register the driver. Another way ois:
+java.sql.Drivermanager.register();
+Connection con = DriverManager.getConnection("db URL", "username", "password");
+Statement st = con.createStatement();
+Send  SQL to db.
+Close Conn
+to uodate/append or perform all DML operations you use ExecuteUpdate method
+for all select opeartions we use ExecuteQuery method
+//all below are interfaces in the same heirarchy as bellow ***
+Statement -- use to pass static queries . Can be used by using createStatement() method.
+PreparedStatement -- to pass dynamic queries using variables we use this. Using prepareStatement() method
+CallableStatement -- to pass PL SQL queries we use callable statement. This also uses prepareStatement().
+ResultSet. We need to perform rs.next() to check if the resultset has any value. It returns true if values are present.
+If true the cursor moves to the first record location. 
+But if we want the cursor to scroll in both forward and reverse direction we set a static variable called
+ResultSet.Scrollable_ForwardOnly. Set the value of it. ResultSet.Type_Scroll_Sensitive
+ResultSet.Type_Scroll_InSensitive . 
+
+
+
+servletcontext - application level
+servletconfig- servlet level.
+
+Github- tool for versioning
+
+
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn
+$ git init
+Initialized empty Git repository in E:/Nal/UserLogIn/.git/
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git remote add origin https://github.com/NaliniPendyala/JavaCode.git
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git pull origin master
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/NaliniPendyala/JavaCode
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .classpath
+        .project
+        .settings/
+        WebContent/
+        build/
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git add *
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ got status
+bash: got: command not found
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   WebContent/META-INF/MANIFEST.MF
+        new file:   WebContent/Registration.jsp
+        new file:   WebContent/WEB-INF/lib/h2-1.4.196.jar
+        new file:   WebContent/WEB-INF/web.xml
+        new file:   WebContent/display.jsp
+        new file:   WebContent/login.jsp
+        new file:   build/classes/UserLogIn/detailsSevlet.class
+        new file:   src/UserLogIn/detailsSevlet.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .classpath
+        .project
+        .settings/
+
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git add .classpath
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git add .settings
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git add project
+fatal: pathspec 'project' did not match any files
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git add .project
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .classpath
+        new file:   .project
+        new file:   .settings/.jsdtscope
+        new file:   .settings/org.eclipse.jdt.core.prefs
+        new file:   .settings/org.eclipse.wst.common.component
+        new file:   .settings/org.eclipse.wst.common.project.facet.core.xml
+        new file:   .settings/org.eclipse.wst.jsdt.ui.superType.container
+        new file:   .settings/org.eclipse.wst.jsdt.ui.superType.name
+        new file:   WebContent/META-INF/MANIFEST.MF
+        new file:   WebContent/Registration.jsp
+        new file:   WebContent/WEB-INF/lib/h2-1.4.196.jar
+        new file:   WebContent/WEB-INF/web.xml
+        new file:   WebContent/display.jsp
+        new file:   WebContent/login.jsp
+        new file:   build/classes/UserLogIn/detailsSevlet.class
+        new file:   src/UserLogIn/detailsSevlet.java
+
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git commit  -m "First Commit"
+[master 0cf971c] First Commit
+ 16 files changed, 314 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .project
+ create mode 100644 .settings/.jsdtscope
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 .settings/org.eclipse.wst.common.component
+ create mode 100644 .settings/org.eclipse.wst.common.project.facet.core.xml
+ create mode 100644 .settings/org.eclipse.wst.jsdt.ui.superType.container
+ create mode 100644 .settings/org.eclipse.wst.jsdt.ui.superType.name
+ create mode 100644 WebContent/META-INF/MANIFEST.MF
+ create mode 100644 WebContent/Registration.jsp
+ create mode 100644 WebContent/WEB-INF/lib/h2-1.4.196.jar
+ create mode 100644 WebContent/WEB-INF/web.xml
+ create mode 100644 WebContent/display.jsp
+ create mode 100644 WebContent/login.jsp
+ create mode 100644 build/classes/UserLogIn/detailsSevlet.class
+ create mode 100644 src/UserLogIn/detailsSevlet.java
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git push origin master
+Counting objects: 28, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (28/28), 1.67 MiB | 216.00 KiB/s, done.
+Total 28 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/NaliniPendyala/JavaCode.git
+   24dcfdc..0cf971c  master -> master
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   WebContent/login.jsp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git add *
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   WebContent/login.jsp
+
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git commit -m "file commited
+> "
+[master 04edb35] file commited
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 353 bytes | 353.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/NaliniPendyala/JavaCode.git
+   0cf971c..04edb35  master -> master
+
+HYD-BBG-MR19-10+MRuser@HYD-BBG-MR19-10 MINGW64 /e/Nal/UserLogIn (master)
+$
